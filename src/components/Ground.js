@@ -4,7 +4,7 @@ import { NearestFilter, RepeatWrapping } from "three";
 
 export default function Ground() {
     const [ref] = usePlane(() => ({
-        rotation: [-Math.PI / 3, 0, 0],
+        rotation: [-Math.PI / 2, 0, 0],
         position: [0, 0, 0],
     }));
 
