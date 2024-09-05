@@ -1,4 +1,4 @@
-import { TextureLoader } from "three";
+import { NearestFilter, TextureLoader } from "three";
 import images from "./images";
 
 const blackWoolTexture = new TextureLoader().load(images.blackWool);
@@ -22,7 +22,28 @@ const blockWheelTexture = new TextureLoader().load(images.blockWheel);
 const spiralWheelTexture = new TextureLoader().load(images.spiralWheel);
 const groundTexture = new TextureLoader().load(images.ironBlock);
 
-const textures = {
+blackWoolTexture.magFilter = NearestFilter;
+blueWoolTexture.magFilter = NearestFilter;
+brownWoolTexture.magFilter = NearestFilter;
+cyanWoolTexture.magFilter = NearestFilter;
+grayWoolTexture.magFilter = NearestFilter;
+greenWoolTexture.magFilter = NearestFilter;
+lightBlueWoolTexture.magFilter = NearestFilter;
+lightGrayWoolTexture.magFilter = NearestFilter;
+limeWoolTexture.magFilter = NearestFilter;
+magentaWoolTexture.magFilter = NearestFilter;
+orangeWoolTexture.magFilter = NearestFilter;
+whiteWoolTexture.magFilter = NearestFilter;
+yellowWoolTexture.magFilter = NearestFilter;
+blackGlassTexture.magFilter = NearestFilter;
+cyanGlassTexture.magFilter = NearestFilter;
+blueGlassTexture.magFilter = NearestFilter;
+grayGlassTexture.magFilter = NearestFilter;
+blockWheelTexture.magFilter = NearestFilter;
+spiralWheelTexture.magFilter = NearestFilter;
+groundTexture.magFilter = NearestFilter;
+
+export {
     blackWoolTexture,
     blueWoolTexture,
     brownWoolTexture,
@@ -44,5 +65,3 @@ const textures = {
     spiralWheelTexture,
     groundTexture,
 };
-
-export default textures;

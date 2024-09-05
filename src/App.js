@@ -3,21 +3,23 @@ import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
 import Ground from "./components/Ground";
 import Player from "./components/Player";
-import "./styles/App.css";
+import Cubes from "./components/Cubes";
+import FirstPersonView from "./components/FirstPersonView";
 
-function App() {
+export default function App() {
     return (
         <>
             <Canvas>
-                <Sky sunPosition={[80, 80, 100]} />
+                <Sky sunPosition={[40, 5, 10]} />
                 <ambientLight intensity={0.5} />
+                <FirstPersonView />
                 <Physics>
                     <Player />
+                    <Cubes />
                     <Ground />
                 </Physics>
             </Canvas>
+            <div className="cursor">+</div>
         </>
     );
 }
-
-export default App;
