@@ -16,11 +16,17 @@ body,
     -moz-osx-font-smoothing: grayscale;
 }
 
-.cursor {
+.absolute {
     position: absolute;
+}
+
+.centered {
     top: 50%;
     left: 50%;
-    font-size: 2rem;
     transform: translate(-50%, -50%);
+}
+
+.cursor {
+    font-size: 2rem;
     color: black;
 }
