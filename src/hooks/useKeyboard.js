@@ -57,7 +57,6 @@ export default function useKeyboard() {
         grayGlass: false,
         blockWheel: false,
         spiralWheel: false,
-        ground: false,
     });
 
     const handleKeyUp = useCallback((e) => {

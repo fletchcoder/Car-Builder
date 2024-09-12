@@ -26,7 +26,34 @@ body,
     transform: translate(-50%, -50%);
 }
 
+.corner {
+    bottom: 0%;
+    right: 0%;
+}
+
 .cursor {
     font-size: 2rem;
     color: black;
+}
+
+.selector {
+    background-color: rgb(24, 226, 226);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: 3px solid white;
+}
+
+.selector-hidden {
+    height: 70px;
+    overflow-y: hidden;
+}
+
+.selector-shown {
+    height: 200px;
+    overflow-y: auto;
+}
+
+.texture-header {
+    color: white;
+    text-align: center;
 }

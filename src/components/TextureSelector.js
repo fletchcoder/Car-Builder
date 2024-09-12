@@ -1,93 +1,38 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useStore from "../hooks/useStore";
-import useKeyboard from "../hooks/useKeyboard";
+import images from "../js/images";
 
-export default function TextureSelector() {
-    const [visible, setVisible] = useState(false);
+export default function TextureSelector({ onClick }) {
     const [activeTexture, setTexture] = useStore((state) => [
         state.texture,
         state.setTexture,
     ]);
-    const {
-        blackWool,
-        blueWool,
-        brownWool,
-        cyanWool,
-        grayWool,
-        greenWool,
-        lightBlueWool,
-        lightGrayWool,
-        limeWool,
-        magentaWool,
-        orangeWool,
-        whiteWool,
-        yellowWool,
-        blackGlass,
-        cyanGlass,
-        blueGlass,
-        grayGlass,
-        blockWheel,
-        spiralWheel,
-    } = useKeyboard();
 
-    useEffect(() => {
-        const pressedTexture = [
-            blackWool,
-            blueWool,
-            brownWool,
-            cyanWool,
-            grayWool,
-            greenWool,
-            lightBlueWool,
-            lightGrayWool,
-            limeWool,
-            magentaWool,
-            orangeWool,
-            whiteWool,
-            yellowWool,
-            blackGlass,
-            cyanGlass,
-            blueGlass,
-            grayGlass,
-            blockWheel,
-            spiralWheel,
-        ];
-        if (pressedTexture) {
-            setTexture(pressedTexture);
-        }
-    }, [
-        setTexture,
-        blackWool,
-        blueWool,
-        brownWool,
-        cyanWool,
-        grayWool,
-        greenWool,
-        lightBlueWool,
-        lightGrayWool,
-        limeWool,
-        magentaWool,
-        orangeWool,
-        whiteWool,
-        yellowWool,
-        blackGlass,
-        cyanGlass,
-        blueGlass,
-        grayGlass,
-        blockWheel,
-        spiralWheel,
-    ]);
+    const [visible, setVisible] = useState(false);
 
-    useEffect(() => {
-        const visibilityTimeout = setTimeout(() => {
-            setVisible(false);
-        }, 2000);
-        setVisible(true);
+    function setCurrentTexture(texture) {
+        setTexture(texture);
+    }
 
-        return () => {
-            clearTimeout(visibilityTimeout);
-        };
-    }, [activeTexture]);
-
-    return visible && <div className="absolute centered">Texture</div>;
+    return (
+        <div
+            className={
+                visible
+                    ? "absolute corner selector selector-shown"
+                    : "absolute corner selector selector-hidden"
+            }
+        >
+            <h1 className="texture-header">Textures</h1>
+            {Object.entries(images).map(([key, src]) => {
+                return (
+                    <img
+                        key={key}
+                        src={src}
+                        className={`${key === activeTexture && "active"}`}
+                        alt={key}
+                    />
+                );
+            })}
+        </div>
+    );
 }
