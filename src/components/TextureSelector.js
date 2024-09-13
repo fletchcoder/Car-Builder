@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useStore from "../hooks/useStore";
+import useKeyboard from "../hooks/useKeyboard";
 import images from "../js/images";
 
-export default function TextureSelector({ onClick }) {
+export default function TextureSelector() {
     const [activeTexture, setTexture] = useStore((state) => [
         state.texture,
         state.setTexture,
@@ -10,9 +11,87 @@ export default function TextureSelector({ onClick }) {
 
     const [visible, setVisible] = useState(false);
 
-    function setCurrentTexture(texture) {
-        setTexture(texture);
-    }
+    const {
+        blackWool,
+        blueWool,
+        brownWool,
+        cyanWool,
+        grayWool,
+        greenWool,
+        lightBlueWool,
+        lightGrayWool,
+        limeWool,
+        magentaWool,
+        orangeWool,
+        whiteWool,
+        yellowWool,
+        blackGlass,
+        cyanGlass,
+        blueGlass,
+        grayGlass,
+        blockWheel,
+        spiralWheel,
+    } = useKeyboard();
+
+    useEffect(() => {
+        const textures = {
+            blackWool,
+            blueWool,
+            brownWool,
+            cyanWool,
+            grayWool,
+            greenWool,
+            lightBlueWool,
+            lightGrayWool,
+            limeWool,
+            magentaWool,
+            orangeWool,
+            whiteWool,
+            yellowWool,
+            blackGlass,
+            cyanGlass,
+            blueGlass,
+            grayGlass,
+            blockWheel,
+            spiralWheel,
+        };
+        const pressedTexture = Object.entries(textures).find(([k, v]) => v);
+        if (pressedTexture) {
+            console.log("texture", pressedTexture);
+            setTexture(pressedTexture[0]);
+        }
+    }, [
+        setTexture,
+        blackWool,
+        blueWool,
+        brownWool,
+        cyanWool,
+        grayWool,
+        greenWool,
+        lightBlueWool,
+        lightGrayWool,
+        limeWool,
+        magentaWool,
+        orangeWool,
+        whiteWool,
+        yellowWool,
+        blackGlass,
+        cyanGlass,
+        blueGlass,
+        grayGlass,
+        blockWheel,
+        spiralWheel,
+    ]);
+
+    useEffect(() => {
+        const visibilityTimeout = setTimeout(() => {
+            setVisible(false);
+        }, 2000);
+        setVisible(true);
+        return () => {
+            clearTimeout(visibilityTimeout);
+        };
+    }, [activeTexture]);
 
     return (
         <div
@@ -23,16 +102,27 @@ export default function TextureSelector({ onClick }) {
             }
         >
             <h1 className="texture-header">Textures</h1>
-            {Object.entries(images).map(([key, src]) => {
-                return (
-                    <img
-                        key={key}
-                        src={src}
-                        className={`${key === activeTexture && "active"}`}
-                        alt={key}
-                    />
-                );
-            })}
+            <div className="texture-grid">
+                {Object.entries(images).map(([key, src], index) => {
+                    if (key !== "ironBlock") {
+                        return (
+                            <div className="texture-div" key={key}>
+                                <img
+                                    src={src}
+                                    className={`${
+                                        key === activeTexture
+                                            ? "texture-image active"
+                                            : "texture-image inactive"
+                                    }`}
+                                    alt={key}
+                                />
+                            </div>
+                        );
+                    } else {
+                        return null;
+                    }
+                })}
+            </div>
         </div>
     );
 }

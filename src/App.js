@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Physics } from "@react-three/cannon";
 import { Canvas } from "@react-three/fiber";
 import { Sky } from "@react-three/drei";
@@ -9,8 +8,6 @@ import FirstPersonView from "./components/FirstPersonView";
 import TextureSelector from "./components/TextureSelector";
 
 export default function App() {
-    const [visible, setVisible] = useState(false);
-
     return (
         <>
             <Canvas>

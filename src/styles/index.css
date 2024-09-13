@@ -23,7 +23,6 @@ body,
 .centered {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .corner {
@@ -41,6 +40,14 @@ body,
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border: 3px solid white;
+    width: 300px;
+    scrollbar-width: none;
+}
+
+@media screen and (max-width: 500px) {
+    .selector {
+        width: 100%;
+    }
 }
 
 .selector-hidden {
@@ -49,11 +56,39 @@ body,
 }
 
 .selector-shown {
-    height: 200px;
+    height: 300px;
     overflow-y: auto;
 }
 
 .texture-header {
     color: white;
     text-align: center;
+}
+
+.texture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.texture-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texture-image {
+    width: 30px;
+    height: 30px;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 10px;
+}
+
+.active {
+    border-color: red;
+}
+
+.inactive {
+    border-color: black;
 }
