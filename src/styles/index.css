@@ -14,6 +14,23 @@ body,
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* COLORS */
+    --main-bg-color: rgb(24, 226, 226);
+    --active-color: rgb(255, 251, 5);
+    --button-bg-color: rgb(190, 19, 19);
+    --button-hover-color: rgb(36, 11, 179);
+    --backdrop-color: rgba(0, 0, 0, 0.5);
+    --tutorial-color: rgba(119, 115, 115, 0.5);
+
+    /* FONT SIZES */
+    --fs-xs: 0.75rem;
+    --fs-small: 1.25rem;
+    --fs-medium: 1.8rem;
+    --fs-large: 2.3rem;
+
+    /* MISC */
+    --bdr-radius: 30px;
 }
 
 .absolute {
@@ -36,9 +53,9 @@ body,
 }
 
 .selector {
-    background-color: rgb(24, 226, 226);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    background-color: var(--main-bg-color);
+    border-top-left-radius: var(--bdr-radius);
+    border-top-right-radius: var(--bdr-radius);
     border: 3px solid white;
     width: 400px;
     height: 70px;
@@ -84,9 +101,92 @@ body,
 }
 
 .active {
-    border-color: rgb(255, 251, 5);
+    border-color: var(--active-color);
 }
 
 .inactive {
     border-color: black;
+}
+
+.tutorial-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    min-height: 500px;
+    background-color: var(--main-bg-color);
+    border: 3px solid white;
+    border-radius: var(--bdr-radius);
+}
+
+.tutorial-div h1 {
+    font-size: var(--fs-large);
+}
+
+.tutorial-div p:first-of-type {
+    width: 40ch;
+}
+
+.tutorial-div p {
+    font-size: var(--fs-small);
+    margin: 0;
+}
+
+.tutorial-div h2 {
+    margin: 0;
+    font-size: var(--fs-medium);
+}
+
+.tutorial-div button {
+    position: relative;
+    top: 0%;
+    right: 0%;
+    font-size: var(--fs-small);
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: var(--bdr-radius);
+    width: 70px;
+    height: 50px;
+}
+
+.tutorial-div button:hover {
+    color: white;
+    background-color: var(--button-hover-color);
+}
+
+@media screen and (max-width: 500px) {
+    .tutorial-div {
+        width: 100%;
+    }
+    .tutorial-div h1,
+    .tutorial-div h2 {
+        font-size: var(--fs-medium);
+    }
+
+    .tutorial-div p {
+        font-size: var(--fs-small);
+    }
+}
+
+.backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    opacity: 0.8;
+    top: 0%;
+    left: 0%;
+    background-color: var(--backdrop-color);
+    backdrop-filter: blur(5px);
+}
+
+.no-display {
+    display: none;
 }
