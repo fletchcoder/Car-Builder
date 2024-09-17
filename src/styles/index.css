@@ -40,7 +40,10 @@ body,
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     border: 3px solid white;
-    width: 300px;
+    width: 400px;
+    height: 70px;
+    transition: height 0.3s ease-in-out;
+    overflow-y: hidden;
     scrollbar-width: none;
 }
 
@@ -50,13 +53,8 @@ body,
     }
 }
 
-.selector-hidden {
-    height: 70px;
-    overflow-y: hidden;
-}
-
-.selector-shown {
-    height: 300px;
+.selector.selector-shown {
+    height: 350px;
     overflow-y: auto;
 }
 
@@ -78,15 +76,15 @@ body,
 }
 
 .texture-image {
-    width: 30px;
-    height: 30px;
-    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
     border-style: solid;
     margin-bottom: 10px;
 }
 
 .active {
-    border-color: red;
+    border-color: rgb(255, 251, 5);
 }
 
 .inactive {

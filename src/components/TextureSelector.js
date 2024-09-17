@@ -57,7 +57,6 @@ export default function TextureSelector() {
         };
         const pressedTexture = Object.entries(textures).find(([k, v]) => v);
         if (pressedTexture) {
-            console.log("texture", pressedTexture);
             setTexture(pressedTexture[0]);
         }
     }, [
@@ -98,7 +97,7 @@ export default function TextureSelector() {
             className={
                 visible
                     ? "absolute corner selector selector-shown"
-                    : "absolute corner selector selector-hidden"
+                    : "absolute corner selector"
             }
         >
             <h1 className="texture-header">Textures</h1>
