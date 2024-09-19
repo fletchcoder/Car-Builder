@@ -381,6 +381,36 @@ const useStore = create((set) => ({
         },
         {
             key: nanoid(),
+            position: [7, 2, -7],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
+            position: [6, 2, -7],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
+            position: [5, 2, -7],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
+            position: [4, 2, -7],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
+            position: [3, 2, -7],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
+            position: [2, 2, -7],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
             position: [7, 2, -8],
             texture: "grayGlass",
         },
@@ -439,6 +469,431 @@ const useStore = create((set) => ({
             position: [2, 2, -6],
             texture: "grayGlass",
         },
+        {
+            key: nanoid(),
+            position: [9, 1, -8],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
+            position: [10, 1, -8],
+            texture: "grayGlass",
+        },
+        {
+            key: nanoid(),
+            position: [9, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [7, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [5, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [2, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [0, 3, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [0, 3, -9],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [0, 3, -8],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [0, 3, -7],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [0, 3, -6],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [0, 3, -5],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [0, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [2, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [5, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [7, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [8, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [9, 3, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [9, 3, -5],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [9, 3, -6],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [9, 3, -7],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [9, 3, -8],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [9, 3, -9],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 3, -9],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 3, -8],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 3, -7],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 3, -6],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 3, -5],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [8, 3, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [8, 3, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [8, 3, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [8, 3, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [8, 3, -9],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [7, 3, -9],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [7, 3, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [7, 3, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [7, 3, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [7, 3, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [5, 3, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [5, 3, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [5, 3, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [5, 3, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [5, 3, -9],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 3, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 3, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 3, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 3, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 3, -9],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 3, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 3, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 3, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 3, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 3, -9],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [2, 3, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [2, 3, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [2, 3, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [2, 3, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [2, 3, -9],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 3, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 3, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 3, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 3, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 3, -9],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 4, -6],
+            texture: "blackWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 4, -6],
+            texture: "blackWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 5, -6],
+            texture: "blackWool",
+        },
+        {
+            key: nanoid(),
+            position: [3, 4, -8],
+            texture: "blackWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 4, -8],
+            texture: "blackWool",
+        },
+        {
+            key: nanoid(),
+            position: [4, 5, -8],
+            texture: "blackWool",
+        },
+        {
+            key: nanoid(),
+            position: [1, 4, -6],
+            texture: "blackWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 4, -4],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 4, -10],
+            texture: "blueWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 4, -5],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 4, -6],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 4, -7],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 4, -8],
+            texture: "grayWool",
+        },
+        {
+            key: nanoid(),
+            position: [6, 4, -9],
+            texture: "grayWool",
+        },
     ],
     addCube: (x, y, z) => {
         set((prev) => ({
@@ -466,7 +921,11 @@ const useStore = create((set) => ({
         }));
     },
     saveWorld: () => {},
-    resetWorld: () => {},
+    resetWorld: () => {
+        set(() => ({
+            cubes: [],
+        }));
+    },
 }));
 
 export default useStore;
