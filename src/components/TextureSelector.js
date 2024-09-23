@@ -23,6 +23,8 @@ export default function TextureSelector() {
         limeWool,
         magentaWool,
         orangeWool,
+        redWool,
+        pinkWool,
         whiteWool,
         yellowWool,
         blackGlass,
@@ -46,6 +48,8 @@ export default function TextureSelector() {
             limeWool,
             magentaWool,
             orangeWool,
+            redWool,
+            pinkWool,
             whiteWool,
             yellowWool,
             blackGlass,
@@ -72,6 +76,8 @@ export default function TextureSelector() {
         limeWool,
         magentaWool,
         orangeWool,
+        redWool,
+        pinkWool,
         whiteWool,
         yellowWool,
         blackGlass,
@@ -102,7 +108,7 @@ export default function TextureSelector() {
         >
             <h1 className="texture-header">Textures</h1>
             <div className="texture-grid">
-                {Object.entries(images).map(([key, src], index) => {
+                {Object.entries(images).map(([key, src]) => {
                     if (key !== "ironBlock") {
                         return (
                             <div className="texture-div" key={key}>

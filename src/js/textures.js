@@ -12,6 +12,8 @@ const lightGrayWoolTexture = new TextureLoader().load(images.lightGrayWool);
 const limeWoolTexture = new TextureLoader().load(images.limeWool);
 const magentaWoolTexture = new TextureLoader().load(images.magentaWool);
 const orangeWoolTexture = new TextureLoader().load(images.orangeWool);
+const redWoolTexture = new TextureLoader().load(images.redWool);
+const pinkWoolTexture = new TextureLoader().load(images.pinkWool);
 const whiteWoolTexture = new TextureLoader().load(images.whiteWool);
 const yellowWoolTexture = new TextureLoader().load(images.yellowWool);
 const blackGlassTexture = new TextureLoader().load(images.blackGlass);
@@ -33,6 +35,8 @@ lightGrayWoolTexture.magFilter = NearestFilter;
 limeWoolTexture.magFilter = NearestFilter;
 magentaWoolTexture.magFilter = NearestFilter;
 orangeWoolTexture.magFilter = NearestFilter;
+redWoolTexture.magFilter = NearestFilter;
+pinkWoolTexture.magFilter = NearestFilter;
 whiteWoolTexture.magFilter = NearestFilter;
 yellowWoolTexture.magFilter = NearestFilter;
 blackGlassTexture.magFilter = NearestFilter;
@@ -55,6 +59,8 @@ export {
     limeWoolTexture,
     magentaWoolTexture,
     orangeWoolTexture,
+    redWoolTexture,
+    pinkWoolTexture,
     whiteWoolTexture,
     yellowWoolTexture,
     blackGlassTexture,
