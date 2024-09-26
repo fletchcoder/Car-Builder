@@ -21,11 +21,13 @@ body,
     --button-bg-color: rgb(190, 19, 19);
     --button-hover-color: rgb(36, 11, 179);
     --backdrop-color: rgba(0, 0, 0, 0.5);
+    --confirm-color: rgb(10, 207, 53);
 
     /* FONT SIZES */
     --fs-xs: 0.75rem;
     --fs-small: 1.25rem;
     --fs-medium: 1.8rem;
+    --fs-medium-large: 2rem;
     --fs-large: 2.3rem;
 
     /* MISC */
@@ -41,9 +43,18 @@ body,
     left: 50%;
 }
 
-.corner {
+.bottom-corner {
     bottom: 0%;
     right: 0%;
+}
+
+.top-corner {
+    top: 0%;
+    right: 0%;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .cursor {
@@ -113,10 +124,7 @@ body,
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    position: absolute;
     z-index: 1000;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     max-width: 600px;
     min-height: 500px;
@@ -144,9 +152,6 @@ body,
 }
 
 .tutorial-div button {
-    position: relative;
-    top: 0%;
-    right: 0%;
     font-size: var(--fs-small);
     background-color: var(--button-bg-color);
     border: none;
@@ -162,7 +167,7 @@ body,
 
 @media screen and (max-width: 500px) {
     .tutorial-div {
-        width: 100%;
+        max-width: 100%;
     }
     .tutorial-div h1,
     .tutorial-div h2 {
@@ -174,16 +179,90 @@ body,
     }
 }
 
-.backdrop {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 900;
-    opacity: 0.8;
-    top: 0%;
-    left: 0%;
-    background-color: var(--backdrop-color);
-    backdrop-filter: blur(5px);
+.menu-div {
+    background-color: var(--main-bg-color);
+    color: white;
+    border: 3px solid white;
+    width: 200px;
+    font-size: var(--fs-medium);
+    font-weight: bold;
+    text-align: center;
+    margin-right: 1rem;
+    border-radius: var(--bdr-radius);
+}
+
+.options-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    border: 3px solid white;
+    border-radius: var(--bdr-radius);
+    color: white;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    min-height: 200px;
+}
+
+.options-div h2 {
+    font-size: var(--fs-medium);
+    margin-top: 0;
+}
+
+.close-button {
+    align-self: flex-end;
+    margin-top: 1rem;
+    margin-right: 2px;
+    font-size: var(--fs-small);
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: var(--button-bg-color);
+}
+
+.close-button:hover {
+    color: var(--active-color);
+    border-color: var(--active-color);
+}
+
+.reset-button {
+    background-color: var(--button-bg-color);
+    font-size: var(--fs-small);
+    margin-bottom: 1rem;
+    color: white;
+    border: none;
+    border-radius: var(--bdr-radius);
+    width: 150px;
+    padding-block: 0.5rem;
+}
+
+.confirmation-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.conf-button-div {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.conf-button-div button {
+    width: 40px;
+    border: none;
+    border-radius: var(--bdr-radius);
+}
+
+.conf-button-div button:first-of-type {
+    background-color: var(--confirm-color);
+}
+
+.conf-button-div button:nth-of-type(2) {
+    background-color: var(--button-bg-color);
 }
 
 .no-display {

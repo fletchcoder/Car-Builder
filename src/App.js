@@ -5,8 +5,10 @@ import Ground from "./components/Ground";
 import Player from "./components/Player";
 import Cubes from "./components/Cubes";
 import FirstPersonView from "./components/FirstPersonView";
+import Cursor from "./components/Cursor";
 import TextureSelector from "./components/TextureSelector";
 import Tutorial from "./components/Tutorial";
+import Menu from "./components/Menu";
 
 export default function App() {
     return (
@@ -21,9 +23,10 @@ export default function App() {
                     <Ground />
                 </Physics>
             </Canvas>
-            <div className="cursor absolute centered">+</div>
+            <Cursor />
             <TextureSelector />
             <Tutorial />
+            <Menu />
         </>
     );
 }

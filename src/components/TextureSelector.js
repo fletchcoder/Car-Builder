@@ -102,8 +102,8 @@ export default function TextureSelector() {
         <div
             className={
                 visible
-                    ? "absolute corner selector selector-shown"
-                    : "absolute corner selector"
+                    ? "absolute bottom-corner selector selector-shown"
+                    : "absolute bottom-corner selector"
             }
         >
             <h1 className="texture-header">Textures</h1>
