@@ -47,7 +47,19 @@ export default function Cube({ position, texture }) {
             }}
         >
             <boxGeometry attach={"geometry"} />
-            <meshStandardMaterial map={activeTexture} attach={"material"} />
+            <meshStandardMaterial
+                map={activeTexture}
+                attach={"material"}
+                transparent="true"
+                opacity={
+                    texture === "cyanGlass" ||
+                    texture === "blackGlass" ||
+                    texture === "blueGlass" ||
+                    texture === "grayGlass"
+                        ? 0.7
+                        : 1
+                }
+            />
         </mesh>
     );
 }
