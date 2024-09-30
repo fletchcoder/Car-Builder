@@ -7,8 +7,9 @@ Car Builder is a 3D sandbox game that is designed for anyone to build the car of
 * CSS
 * JavaScript
 * React
-* Three
+* Three/Drei/Cannon
 * Zustand
+* Nanoid
 
 ## Controls
 
@@ -19,3 +20,7 @@ Car Builder is a 3D sandbox game that is designed for anyone to build the car of
 * **Delete Block**: Alt + Left Click
 
 You can click directly on the ground to place a block, in the air or you can click any face of an existing block to add a block on that respective side. When deleting a block, the block that is the closest to the middle cursor will be deleted.
+
+## Texture Selector
+
+
