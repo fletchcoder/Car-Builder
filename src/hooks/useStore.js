@@ -1,13 +1,12 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { nanoid } from "nanoid";
-import { data } from "../js/data";
 
 const useStore = create(
     persist(
         (set) => ({
             texture: "blackWool",
-            cubes: data,
+            cubes: [],
             addCube: (x, y, z) => {
                 set((prev) => ({
                     cubes: [
